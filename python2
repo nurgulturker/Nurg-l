@@ -1,0 +1,24 @@
+import re 
+
+regex = '^[a-z0-9]+[-_]?[a-z0-9]+[@]\w+[.]\w+[.]\w+$'
+	
+def check(email): 
+
+	if(re.search(regex,email)): 
+		print("Mail adresiniz doğrudur.") 
+		
+	else: 
+		print("Mail adresiniz yanlıştır.") 
+	
+
+if _name_ == '_main_' : 
+	
+	email = "gaziuniversitesi@gazi.edu.tr"
+	
+	check(email) 
+
+	email = "gaziuniversitesi.gazi.edu.tr"
+	check(email) 
+
+	email = "gaziuniversitesi.gazi.edu"
+	check(email)
